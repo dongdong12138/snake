@@ -23,8 +23,8 @@
       float: right;
       margin: 4px 4px 0 0;
     }
-    #container > button {
-      margin: 4px 0 0 4px;
+    #container > button{
+      margin: 4px 0 0 2px;
       font-size: 14px;
       height: 32px;
       padding: 0 1em;
@@ -45,8 +45,8 @@
     }
     .tip {
       display: inline-block;
-      margin-left: 16%;
-      margin-top: 4px;
+      margin-left: 6%;
+      margin-top: 2px;
       font-size: 14px;
     }
     #person > div {
@@ -54,6 +54,9 @@
       position: absolute;
       left: 0;
       top: 0;
+    }
+    #container #score {
+      margin-top: 8px
     }
     .personBody {
       opacity: .5;
@@ -64,6 +67,7 @@
 <div id="container">
   <ul id="ul"></ul>
   <button id="button">start</button>
+  <button id="restart">restart</button>
   <p class="tip">Tip：请使用方向键控制</p>
   <div id="score">score: 0</div>
   <div id="person"></div>

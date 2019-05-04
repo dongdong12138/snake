@@ -7,13 +7,18 @@ var container = $id('container'),
     ul = $id('ul'),
     lis = $tagName(ul, 'li'),
     btn = $id('button'),
+    restart = $id('restart'),
     person = $id('person'),
     personDiv = $tagName(person, 'div'),
     data = {size: 20, x: 20, y: 20},
     perData = {speed: 200, code: 39}
 
 
-
+restart.addEventListener('click', () => {  // 重新开始
+  person.removeChild(person.firstChild)
+  food.remove()
+  btn.onclick()
+})
 
 function init() {  // 初始化游戏
   createMap()
