@@ -112,9 +112,6 @@ function bindPerson() {  // 方向键控制移动
       case 40:
         perData.code = 40
         break
-      default:
-        alert('请使用方向键控制')
-        break
     }
   }
 }
