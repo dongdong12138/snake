@@ -15,7 +15,7 @@ var container = $id('container'),
 
 
 restart.addEventListener('click', () => {  // 重新开始
-  person.removeChild(person.firstChild)
+  person.innerHTML = ''
   food.remove()
   btn.onclick()
 })
@@ -123,9 +123,10 @@ function bindPerson() {  // 方向键控制移动
 
 function movePerson() {  // 人物移动
   timer = setInterval(function () {
-    if (isOut() || isSelf()) {
+    if (isOut() || isSelf()) {  // 判断游戏结束
       alert('Game Over!')
       clearInterval(timer)
+      perData.code = 39
     }
     if (collide(personDiv[0], food)) {
       food.className = 'personBody'
